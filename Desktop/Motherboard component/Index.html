@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Build-a-Board Simulator</title>
+    <link rel="stylesheet" href="css.style/stylesheet.css"/>
+</head>
+<body>
+    </div>
+    <button id="toggleView">🔁 Switch to BIOS View</button>
+    <main id="motherboardView">
+        <!--Motherboard content-->
+    </main>
+    <section id="biosView" class="hidden">
+        <!---BIOS content-->
+    </section>
+        <h1>🧩 Interactive Motherboard Simulation</h1>
+        <div class="board">
+            <div class="component cpu" id="cpu">🧠 CPU</div>
+            <div class="component ram" id="ram1">💾 RAM 1</div>
+            <div class="component ram" id="ram2">💾 RAM 2</div>
+            <div class="component rom" id="rom">📀 ROM</div>
+            <div class="component cmos" id="cmos">🔋 CMOS</div>
+            <div class="component storage" id="storage">🗃️ Storage</div>
+            <div class="component power" id="power">🔌 Power</div>
+        </div>
+    </main>
+    <section id="biosView" style="display:block;">
+        <h1 class="bios-header">BIOS Setup Utility</h1>
+        <div class="bios-screen">
+            <p>BIOS Version: <strong>1.0.0</strong></p>
+            <p>Boot Order:</p>
+            <ul>
+                <li>[1] HDD</li>
+                <li>[2] USB</li>
+                <li>[3] CD/DVD</li>
+            </ul>
+            <p>Security: <span class="toggle">[ON]</span></p>
+            <p>CMOS Clock: <span id="clock"></span></p>
+            <p class="footer">Press <strong>F10</strong> to Save and Exit | Press <strong>Esc</strong> to return</p>
+        </div>
+    </section>
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="modalTitle"></h3>
+            <p id="modalDesc"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

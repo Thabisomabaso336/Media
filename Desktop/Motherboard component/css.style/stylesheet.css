@@ -1,0 +1,91 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: hsl(180, 33%, 98%);
+    margin: 0;
+    padding: 1rem;
+}
+
+#toggleView {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    padding: 10px 15px;
+    font-weight: bold;
+    border: none;
+    background: #3b82f6;
+    color: rgb(255, 255, 255);
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#motherboardView h1 {
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-areas: 
+        "ram1 cpu ram2"
+        "rom cpu cmos"
+        "storage power power";
+    gap: 1rem;
+    margin-top: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.component {
+    padding: 20px;
+    background: #4b5563;
+    color: white;
+    text-align: center;
+    border: 2px solid #1f2937;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.component:hover {
+    transform: scale(1.05);
+}
+
+.cpu {
+    grid-area: cpu;
+    background-color: #1e40af;
+}
+
+.ram {
+    background-color: #059669;
+}
+
+.rom {
+    grid-area: rom;
+    background-color: #6b21a8;
+}
+
+.cmos {
+    grid-area: cmos;
+    background-color: #d97706;
+}
+
+.storage {
+    grid-area: storage;
+    background-color: #0f766e;
+}
+
+.power {
+    grid-area: power;
+    background-color: #dc2626;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+}
+
+.hidden {
+    display: none;
+}
